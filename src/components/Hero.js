@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import { useScrollAnimation } from '../utils/scrollAnimation';
-import whatsappImage from './WhatsApp Image 2025-10-23 at 19.25.35_137a5065.jpg';
+import whatsappImage from './Photo.jpg';
 import './Hero.css';
 
 const Hero = () => {
