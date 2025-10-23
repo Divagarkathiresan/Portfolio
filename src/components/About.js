@@ -1,0 +1,53 @@
+import React from 'react';
+import { useScrollAnimation } from '../utils/scrollAnimation';
+import './About.css';
+
+const About = () => {
+  useScrollAnimation();
+  
+  return (
+    <section id="about" className="section about">
+      <div className="container">
+        <h2 className="section-title animate-on-scroll from-bottom">About Me</h2>
+        <div className="about-content">
+          <div className="about-text animate-on-scroll">
+            <p>
+              I'm a passionate Full Stack Developer with expertise in modern web technologies. 
+              Currently pursuing B.E in Computer Science and Design from Sri Krishna College 
+              of Engineering and Technology, Coimbatore.
+            </p>
+            <p>
+              I specialize in building scalable web applications using React.js for frontend 
+              and Spring Boot for backend development. My experience includes creating RESTful APIs, 
+              implementing JWT authentication, and working with databases like MySQL.
+            </p>
+            <div className="education">
+              <h3>Education</h3>
+              <div className="education-item">
+                <h4>B.E, Computer Science And Design</h4>
+                <p>Sri Krishna College Of Engineering And Technology</p>
+                <p>Coimbatore, Tamil Nadu</p>
+              </div>
+            </div>
+          </div>
+          <div className="about-stats animate-on-scroll from-right">
+            <div className="stat">
+              <h3>3+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div className="stat">
+              <h3>2+</h3>
+              <p>Years Learning</p>
+            </div>
+            <div className="stat">
+              <h3>100%</h3>
+              <p>Dedication</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
