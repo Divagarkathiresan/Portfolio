@@ -31,14 +31,11 @@ const Hero = () => {
               <a href="https://www.linkedin.com/in/divagar-kathiresan-a789352a0" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin />
               </a>
-              <a href="https://leetcode.com/u/Divagar_k/AN/" target="_blank" rel="noopener noreferrer">
+              <a href="https://leetcode.com/u/Divagar_k/" target="_blank" rel="noopener noreferrer">
                 <SiLeetcode />
               </a>
               <a href="mailto:divagar656@gmail.com">
                 <FaEnvelope />
-              </a>
-              <a href="tel:+917010812682">
-                <FaPhone />
               </a>
               <a href="https://wa.me/917010812682" target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp />
