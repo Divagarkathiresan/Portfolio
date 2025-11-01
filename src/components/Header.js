@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import profileImage from './Photo.jpg';
 import './Header.css';
 
 const Header = () => {
@@ -9,6 +10,7 @@ const Header = () => {
       <div className="container">
         <div className="nav">
           <div className="logo">
+            <img src={profileImage} alt="Divagar K" className="logo-image" />
             <h2>Divagar K</h2>
           </div>
           <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
