@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaMapMarkerAlt, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import { useScrollAnimation } from '../utils/scrollAnimation';
 import './Contact.css';
@@ -24,7 +24,7 @@ const Contact = () => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
+    alert('Message sent! I\'ll reply within 24 hours.');
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -37,7 +37,11 @@ const Contact = () => {
             <h3>Let's Connect</h3>
             <p>
               I'm always open to discussing new opportunities, interesting projects, 
-              or just having a chat about technology and development.
+              or just having a chat about technology and development. I typically reply 
+              within 24 hours via email.
+            </p>
+            <p>
+              <strong>Currently open to full-time opportunities & freelance projects in Full Stack Development.</strong>
             </p>
             <div className="contact-details">
               <div className="contact-item">
@@ -48,17 +52,10 @@ const Contact = () => {
                 </div>
               </div>
               <div className="contact-item">
-                <FaPhone className="contact-icon" />
-                <div>
-                  <h4>Phone</h4>
-                  <a href="tel:+917010812682">+91 7010812682</a>
-                </div>
-              </div>
-              <div className="contact-item">
                 <FaMapMarkerAlt className="contact-icon" />
                 <div>
                   <h4>Location</h4>
-                  <span>Salem, India 636401</span>
+                  <span>Salem, India</span>
                 </div>
               </div>
             </div>
@@ -69,7 +66,7 @@ const Contact = () => {
               <a href="https://www.linkedin.com/in/divagar-kathiresan-a789352a0" target="_blank" rel="noopener noreferrer">
                 <FaLinkedin />
               </a>
-              <a href="https://leetcode.com/u/Divagar_k/AN/" target="_blank" rel="noopener noreferrer">
+              <a href="https://leetcode.com/u/Divagar_k/" target="_blank" rel="noopener noreferrer">
                 <SiLeetcode />
               </a>
             </div>

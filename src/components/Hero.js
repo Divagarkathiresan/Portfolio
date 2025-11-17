@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import { useScrollAnimation } from '../utils/scrollAnimation';
 import whatsappImage from './Photo.jpg';
@@ -16,13 +16,18 @@ const Hero = () => {
             <h1>Hi, I'm <span>Divagar K</span></h1>
             <h2>Full Stack Developer</h2>
             <p>
-              An organized and motivated individual, eager to utilize time management and 
-              organizational skills across diverse settings. Seeking entry-level opportunities 
-              to enhance abilities while contributing to company growth.
+              Full Stack Developer crafting scalable web applications with React & Spring Boot. 
+              Building secure, user-centric solutions with modern technologies and delivering 
+              measurable performance improvements.
             </p>
+            <div className="hero-cta">
+              <p className="availability-status">
+                🟢 Currently open to full-time opportunities & freelance projects
+              </p>
+            </div>
             <div className="hero-buttons">
-              <a href="#projects" className="btn">View Projects</a>
-              <a href="#contact" className="btn btn-outline">Contact Me</a>
+              <a href="#projects" className="btn">View My Work</a>
+              <a href="#contact" className="btn btn-outline">Let's Connect</a>
             </div>
             <div className="social-links">
               <a href="https://github.com/Divagarkathiresan" target="_blank" rel="noopener noreferrer">
@@ -37,9 +42,7 @@ const Hero = () => {
               <a href="mailto:divagar656@gmail.com">
                 <FaEnvelope />
               </a>
-              <a href="https://wa.me/917010812682" target="_blank" rel="noopener noreferrer">
-                <FaWhatsapp />
-              </a>
+
             </div>
           </div>
           <div className="hero-image animate-on-scroll from-right">

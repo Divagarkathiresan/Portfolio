@@ -73,6 +73,40 @@
   color: white;
 }
 
+.project-metrics {
+  margin-bottom: 1.5rem;
+}
+
+.project-metrics h4 {
+  color: #1f2937;
+  font-size: 1rem;
+  margin: 0 0 0.8rem 0;
+  font-weight: 600;
+}
+
+.project-metrics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-metrics li {
+  color: #059669;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.project-metrics li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #059669;
+  font-weight: bold;
+}
+
 .project-links {
   display: flex;
   gap: 1rem;
