@@ -1,0 +1,137 @@
+.projects {
+  background: white;
+}
+
+.projects-grid {
+  display: grid;
+  /* smaller cards: reduce minimum width and gap */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.project-card {
+  background: #f9fafb;
+  border-radius: 8px;
+  /* reduce padding to make card more compact */
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+  border: 1px solid #e5e7eb;
+  min-height: 140px;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  border-color: #3b82f6;
+}
+
+.project-header {
+  margin-bottom: 1rem;
+}
+
+.project-type {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.project-card h3 {
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin-bottom: 0.6rem;
+}
+
+.project-description {
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin-bottom: 1rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background: #e5e7eb;
+  color: #374151;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tech-tag:hover {
+  background: #3b82f6;
+  color: white;
+}
+
+.project-metrics {
+  margin-bottom: 0.8rem;
+}
+
+.project-metrics h4 {
+  color: #1f2937;
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.project-metrics ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-metrics li {
+  color: #059669;
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.project-metrics li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #059669;
+  font-weight: bold;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.project-link:hover {
+  color: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
