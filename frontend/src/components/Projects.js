@@ -8,13 +8,6 @@ const Projects = () => {
   
   const projects = [
     {
-      title: 'Dynamic Online Book Store',
-      description: 'Built a Spring Boot backend with REST APIs for books, users,cart, and orders. Implemented JWT authentication and RBAC, designed scalable MySQL schemas, and developed admin endpoints for product management, order tracking, and system operations.',
-      tech: ['Spring Boot', 'MySQL', 'JWT', 'REST API', 'Query Optimization'],
-      github: 'https://github.com/Divagarkathiresan/book-store-api-project',
-      type: 'Backend - API Design - Database Architecture'
-    },
-    {
       title: 'Food Delivery System',
       description:'Developed a responsive React-based food delivery interface with restaurant browsing, cart management, and order placement. Implemented Hooks Context for state management, integrated REST APIs for live order updates, and focused on clean UI and smooth userexperience.',
       tech: ['React', 'JavaScript', 'CSS'],
@@ -26,8 +19,17 @@ const Projects = () => {
       title: 'Learning Management System',
       description: 'Created a full-stack LMS using Spring Boot and React.Developed APIs for authentication, courses, assignments, and roles (student/admin). Implemented JWT + RBAC security and built a responsive frontend with Hooks/Context for seamless interaction.',
       tech: ['React', 'Spring Boot', 'MySQL', 'JWT', 'REST API'],
-      github: 'https://github.com/iamneo-production/381ae5ba-c1d6-4e88-a7a6-d88dd444461d-e799d43d-bba0-4b4e-a758-5ee70f4c6e6a/tree/Learning-Management-System-Divagarkathiresan',
+      github: 'https://github.com/Divagarkathiresan/Learning-Management-System',
+      live:'https://learning-management-system-cn9j.onrender.com',
       type: 'Full Stack - System Architecture - Automation'
+    },
+    {
+      title: 'EduStay',
+      description: 'Created Edustay, a full-stack accommodation management system using Spring Boot and React. Developed REST APIs for authentication, property listings, bookings, and role-based access (user/admin). Implemented JWT-based authentication with RBAC security and built a responsive frontend using React Hooks and Context API for seamless interaction.',
+      tech: ['React','Spring Boot' ,'MySQL', 'JWT', 'REST API',],
+      github: 'https://github.com/Divagarkathiresan/EduStay/tree/postgreSql',
+      live:'',
+      type: 'Full Stack'
     }
   ];
 
@@ -40,11 +42,7 @@ const Projects = () => {
             <div
               key={index}
               className="project-card animate-on-scroll"
-              onClick={() => project.live && window.open(project.live, '_blank', 'noopener,noreferrer')}
-              onKeyDown={(e) => { if (project.live && (e.key === 'Enter' || e.key === ' ')) window.open(project.live, '_blank', 'noopener,noreferrer'); }}
-              role={project.live ? 'link' : undefined}
-              tabIndex={project.live ? 0 : -1}
-              style={{ animationDelay: `${index * 0.2}s`, cursor: project.live ? 'pointer' : 'default' }}
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="project-header">
                 <div className="project-type">{project.type}</div>
@@ -70,6 +68,11 @@ const Projects = () => {
                 <a href={project.github} target="_blank" rel="noopener noreferrer" className="project-link">
                   <FaGithub /> View Code
                 </a>
+                {project.live && (
+                  <a href={project.live} target="_blank" rel="noopener noreferrer" className="project-link">
+                    <FaExternalLinkAlt /> Live Demo
+                  </a>
+                )}
               </div>
             </div>
           ))}
