@@ -16,7 +16,7 @@ const Projects = () => {
       type: 'Frontend - UI/UX - Responsive Design'
     },
     {
-      title: 'Learning Management System',
+      title: 'LearnBase',
       description: 'Created a full-stack LMS using Spring Boot and React.Developed APIs for authentication, courses, assignments, and roles (student/admin). Implemented JWT + RBAC security and built a responsive frontend with Hooks/Context for seamless interaction.',
       tech: ['React', 'Spring Boot', 'MySQL', 'JWT', 'REST API'],
       github: 'https://github.com/Divagarkathiresan/Learning-Management-System',
@@ -28,7 +28,7 @@ const Projects = () => {
       description: 'Created Edustay, a full-stack accommodation management system using Spring Boot and React. Developed REST APIs for authentication, property listings, bookings, and role-based access (user/admin). Implemented JWT-based authentication with RBAC security and built a responsive frontend using React Hooks and Context API for seamless interaction.',
       tech: ['React','Spring Boot' ,'MySQL', 'JWT', 'REST API',],
       github: 'https://github.com/Divagarkathiresan/EduStay/tree/postgreSql',
-      live:'',
+      live:'https://edustay-frontend-56xj.onrender.com',
       type: 'Full Stack'
     }
   ];
