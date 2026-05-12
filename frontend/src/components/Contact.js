@@ -12,6 +12,9 @@ const Contact = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+  const recipientEmail = 'divagar656@gmail.com';
 
   const handleChange = (e) => {
     setFormData({
@@ -20,13 +23,85 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Message sent! I\'ll reply within 24 hours.');
-    setFormData({ name: '', email: '', message: '' });
+    setIsSubmitting(true);
+    setSubmitStatus({ type: '', message: '' });
+
+    try {
+      const payload = new URLSearchParams({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        _subject: `Portfolio Contact: ${formData.name}`,
+        _captcha: 'false',
+        _template: 'table',
+        _replyto: formData.email
+      });
+
+      const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+          Accept: 'application/json'
+        },
+        body: payload.toString()
+      });
+
+      const responseType = response.headers.get('content-type') || '';
+      let result = {};
+
+      if (responseType.includes('application/json')) {
+        result = await response.json();
+      } else {
+        const responseText = await response.text();
+        try {
+          result = JSON.parse(responseText);
+        } catch {
+          result = { message: responseText };
+        }
+      }
+
+      const isSuccess =
+        result.success === true ||
+        result.success === 'true' ||
+        (typeof result.message === 'string' && /sent|success/i.test(result.message));
+
+      if (!response.ok || !isSuccess) {
+        throw new Error(result.message || `Unable to send message (HTTP ${response.status}).`);
+      }
+
+      setSubmitStatus({
+        type: 'success',
+        message: "Message sent successfully. I'll reply within 24 hours."
+      });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Contact form submission failed:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: error.message || 'Message sending failed. Please try again.'
+      });
+      // Fallback: open user's default mail client with prefilled message so they can send the message
+      try {
+        // small delay so the error message is visible briefly
+        setTimeout(() => {
+          window.location.href = mailtoHref;
+        }, 600);
+      } catch (mailtoErr) {
+        // ignore if mailto fails
+        console.error('Mailto fallback failed:', mailtoErr);
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
+  const mailtoHref = `mailto:${recipientEmail}?subject=${encodeURIComponent(
+    `Portfolio Contact: ${formData.name || 'Website Visitor'}`
+  )}&body=${encodeURIComponent(
+    `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+  )}`;
 
   return (
     <section id="contact" className="section contact">
@@ -102,7 +177,18 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            <button type="submit" className="btn">Send Message</button>
+            <button type="submit" className="btn" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+            </button>
+            {submitStatus.message && (
+              <p className={`form-status ${submitStatus.type}`} role="status">
+                {submitStatus.message}
+              </p>
+            )}
+            {/* Always show a fallback mailto link so the user can send via their email app if needed */}
+            <a className="mailto-fallback" href={mailtoHref}>
+              Send via Email App
+            </a>
           </form>
         </div>
       </div>

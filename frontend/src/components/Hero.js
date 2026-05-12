@@ -29,7 +29,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <div className="hero-text">
-            <h1 className="hero-title hero-element">Divagar K</h1>
+            <h2 className="hero-title hero-element">Divagar K</h2>
             <h2 className="hero-subtitle hero-element">Full Stack Developer</h2>
             <p className="hero-description hero-element">
               Crafting scalable web applications with React & Spring Boot. 

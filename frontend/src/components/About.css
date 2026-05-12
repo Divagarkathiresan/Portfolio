@@ -64,8 +64,7 @@
 
 .stat {
   text-align: center;
-  padding: 2rem;
-  background: #f9fafb;
+  padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid #e5e7eb;
   transition: all 0.3s ease;

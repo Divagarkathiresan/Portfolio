@@ -8,8 +8,22 @@ const Projects = () => {
   
   const projects = [
     {
+      title: 'GlycoSense',
+      description: 'AI-powered virtual health assistant for diabetes risk prediction. Integrated machine learning models, explainable AI (XAI), analytics dashboards, and conversational interfaces to deliver personalized preventive healthcare insights.',
+      tech: ['React', 'FastAPI', 'Machine Learning', 'XAI', 'Python'],
+      github: 'https://github.com/Divagarkathiresan',
+      type: 'AI / ML - Full Stack - Healthcare'
+    },
+    {
+      title: 'PolyQuery',
+      description: 'Multilingual AI-powered document QA system using semantic search and intelligent response generation. Integrated Google Gemini AI with automatic language detection and translation for multilingual document interaction.',
+      tech: ['FastAPI', 'FAISS', 'SentenceTransformers', 'Google Gemini AI', 'Python'],
+      github: 'https://github.com/Divagarkathiresan',
+      type: 'AI / NLP - Multilingual - Document Intelligence'
+    },
+    {
       title: 'Food Delivery System',
-      description:'Developed a responsive React-based food delivery interface with restaurant browsing, cart management, and order placement. Implemented Hooks Context for state management, integrated REST APIs for live order updates, and focused on clean UI and smooth userexperience.',
+      description: 'Responsive React-based food delivery interface with restaurant browsing, cart management, and order placement. Implemented Hooks Context for state management, integrated REST APIs for live order updates.',
       tech: ['React', 'JavaScript', 'CSS'],
       github: 'https://github.com/Divagarkathiresan/food-delivery',
       live: 'https://food-delivery-frontend-uixs.onrender.com',
@@ -17,18 +31,18 @@ const Projects = () => {
     },
     {
       title: 'LearnBase',
-      description: 'Created a full-stack LMS using Spring Boot and React.Developed APIs for authentication, courses, assignments, and roles (student/admin). Implemented JWT + RBAC security and built a responsive frontend with Hooks/Context for seamless interaction.',
+      description: 'Full-stack LMS using Spring Boot and React. Developed APIs for authentication, courses, assignments, and roles (student/admin). Implemented JWT + RBAC security and built a responsive frontend with Hooks/Context.',
       tech: ['React', 'Spring Boot', 'MySQL', 'JWT', 'REST API'],
       github: 'https://github.com/Divagarkathiresan/Learning-Management-System',
-      live:'https://learning-management-system-cn9j.onrender.com',
-      type: 'Full Stack - System Architecture - Automation'
+      live: 'https://learning-management-system-cn9j.onrender.com',
+      type: 'Full Stack - System Architecture'
     },
     {
       title: 'EduStay',
-      description: 'Created Edustay, a full-stack accommodation management system using Spring Boot and React. Developed REST APIs for authentication, property listings, bookings, and role-based access (user/admin). Implemented JWT-based authentication with RBAC security and built a responsive frontend using React Hooks and Context API for seamless interaction.',
-      tech: ['React','Spring Boot' ,'MySQL', 'JWT', 'REST API',],
+      description: 'Full-stack accommodation management system using Spring Boot and React. REST APIs for authentication, property listings, bookings, and role-based access. JWT-based authentication with RBAC security.',
+      tech: ['React', 'Spring Boot', 'MySQL', 'JWT', 'REST API'],
       github: 'https://github.com/Divagarkathiresan/EduStay/tree/postgreSql',
-      live:'https://edustay-frontend-56xj.onrender.com',
+      live: 'https://edustay-frontend-56xj.onrender.com',
       type: 'Full Stack'
     }
   ];

@@ -112,6 +112,36 @@
   min-height: 120px;
 }
 
+.contact-form .btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.form-status.success {
+  color: #166534;
+}
+
+.form-status.error {
+  color: #b91c1c;
+}
+
+.mailto-fallback {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mailto-fallback:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .contact-content {
     grid-template-columns: 1fr;
