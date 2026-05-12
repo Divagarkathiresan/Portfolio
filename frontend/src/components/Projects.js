@@ -16,7 +16,7 @@ const Projects = () => {
     },
     {
       title: 'PolyQuery',
-      description: 'Multilingual AI-powered document QA system using semantic search and intelligent response generation. Integrated Google Gemini AI with automatic language detection and translation for multilingual document interaction.',
+      description: 'An AI-powered multilingual QA system that lets you ask questions about any document in your language. Upload PDFs or text files, ask in any of 10+ languages, and get intelligent answers powered by Mistral AI and semantic search. PolyQuery automatically translates, analyzes, and responds—making document comprehension truly borderless.',
       tech: ['FastAPI', 'FAISS', 'SentenceTransformers', 'Google Gemini AI', 'Python'],
       github: 'https://github.com/Divagarkathiresan',
       type: 'AI / NLP - Multilingual - Document Intelligence'
