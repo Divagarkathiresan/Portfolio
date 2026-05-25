@@ -4,6 +4,8 @@ import { SiLeetcode } from 'react-icons/si';
 import { useScrollAnimation } from '../utils/scrollAnimation';
 import './Contact.css';
 
+const RECIPIENT_EMAIL = 'divagar656@gmail.com';
+
 const Contact = () => {
   useScrollAnimation();
   
@@ -14,7 +16,6 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
-  const recipientEmail = 'divagar656@gmail.com';
 
   const handleChange = (e) => {
     setFormData({
@@ -36,10 +37,11 @@ const Contact = () => {
         _subject: `Portfolio Contact: ${formData.name}`,
         _captcha: 'false',
         _template: 'table',
+        replyto: formData.email,
         _replyto: formData.email
       });
 
-      const response = await fetch(`https://formsubmit.co/ajax/${recipientEmail}`, {
+      const response = await fetch(`https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
@@ -97,7 +99,7 @@ const Contact = () => {
     }
   };
 
-  const mailtoHref = `mailto:${recipientEmail}?subject=${encodeURIComponent(
+  const mailtoHref = `mailto:${RECIPIENT_EMAIL}?subject=${encodeURIComponent(
     `Portfolio Contact: ${formData.name || 'Website Visitor'}`
   )}&body=${encodeURIComponent(
     `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
@@ -123,7 +125,7 @@ const Contact = () => {
                 <FaEnvelope className="contact-icon" />
                 <div>
                   <h4>Email</h4>
-                  <a href="mailto:divagar656@gmail.com">divagar656@gmail.com</a>
+                  <a href={`mailto:${RECIPIENT_EMAIL}`}>{RECIPIENT_EMAIL}</a>
                 </div>
               </div>
               <div className="contact-item">
@@ -185,10 +187,6 @@ const Contact = () => {
                 {submitStatus.message}
               </p>
             )}
-            {/* Always show a fallback mailto link so the user can send via their email app if needed */}
-            <a className="mailto-fallback" href={mailtoHref}>
-              Send via Email App
-            </a>
           </form>
         </div>
       </div>

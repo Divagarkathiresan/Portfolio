@@ -3,11 +3,15 @@ import { useScrollAnimation } from '../utils/scrollAnimation';
 import image1 from '../Experiance_images/image.png';
 import image2 from '../Experiance_images/image copy.png';
 import image3 from '../Experiance_images/image copy 2.png';
+import image4 from '../Experiance_images/image 123.jpeg';
+import image5 from '../Experiance_images/WhatsApp Image 2026-05-26 at 01.24.12.jpeg';
+import image6 from '../Experiance_images/WhatsApp Image 2026-05-26 at 01.24.14.jpeg';
+import image7 from '../Experiance_images/WhatsApp Image 2026-05-26 at 01.24.16.jpeg';
 import './Experience.css';
 
 const Experience = () => {
   useScrollAnimation();
-  const images = [image1, image2, image3];
+  const images = [ image3 , image4, image5, image6, image7];
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {
@@ -23,7 +27,7 @@ const Experience = () => {
         <h2 className="section-title animate-on-scroll from-bottom">Experience</h2>
         <div className="experience-content">
           <div className="experience-details animate-on-scroll">
-            <h3>Work Experience</h3>
+            <h3>Hackathon Experience</h3>
             <div className="experience-item">
               <div className="experience-header">
                 <h4>Backend Developer</h4>
