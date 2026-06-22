@@ -30,16 +30,17 @@ const Experience = () => {
             <h3>Hackathon Experience</h3>
             <div className="experience-item">
               <div className="experience-header">
-                <h4>Backend Developer</h4>
+                <h4>Frontend Developer</h4>
                 <span className="experience-badge">Hackathon · IamNeo · 2026</span>
               </div>
               <p className="experience-duration">40-Hour Hackathon</p>
               <p className="experience-stack">React · FastAPI · ML</p>
               <ul className="experience-points">
-                <li>Developed an AI-driven virtual health assistant for predictive diabetes risk assessment using ML models and rule-based inference.</li>
-                <li>Built a responsive React frontend with interactive dashboards and conversational UI for real-time health insights.</li>
-                <li>Integrated a FastAPI backend with explainable AI (XAI) techniques to provide transparent risk scoring and personalized recommendations.</li>
-              </ul>
+                  <li>Developed a responsive and user-friendly React frontend for an AI-driven virtual health assistant focused on predictive diabetes risk assessment.</li>
+                  <li>Designed and implemented interactive dashboards, data visualization components, and conversational UI to deliver real-time health insights.</li>
+                  <li>Integrated frontend modules with FastAPI APIs, ensuring seamless data flow between the user interface and machine learning services.</li>
+                  <li>Enhanced user experience by presenting explainable AI (XAI) results through intuitive visualizations, transparent risk scores, and personalized health recommendations.</li>
+                </ul>
             </div>
           </div>
           <div className="experience-visuals animate-on-scroll from-right">
