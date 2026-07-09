@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useScrollAnimation } from '../utils/scrollAnimation';
-import image1 from '../Experiance_images/image.png';
-import image2 from '../Experiance_images/image copy.png';
-import image3 from '../Experiance_images/image copy 2.png';
-import image4 from '../Experiance_images/image 123.jpeg';
-import image5 from '../Experiance_images/WhatsApp Image 2026-05-26 at 01.24.12.jpeg';
-import image6 from '../Experiance_images/WhatsApp Image 2026-05-26 at 01.24.14.jpeg';
-import image7 from '../Experiance_images/WhatsApp Image 2026-05-26 at 01.24.16.jpeg';
 import './Experience.css';
 
 const Experience = () => {
