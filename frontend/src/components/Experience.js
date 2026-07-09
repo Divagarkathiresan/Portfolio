@@ -3,16 +3,7 @@ import { useScrollAnimation } from '../utils/scrollAnimation';
 import './Experience.css';
 
 const Experience = () => {
-  useScrollAnimation();
-  const images = [ image3 , image4, image5, image6, image7];
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, [images.length]);
+  useScrollAnimation()
 
   return (
     <section id="experience" className="section experience">
