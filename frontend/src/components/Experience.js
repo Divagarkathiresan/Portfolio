@@ -43,12 +43,6 @@ const Experience = () => {
                 </ul>
             </div>
           </div>
-          <div className="experience-visuals animate-on-scroll from-right">
-            <h3>Experience Visuals</h3>
-            <div className="gallery-frame">
-              <img src={images[currentImage]} alt={`Experience ${currentImage + 1}`} />
-            </div>
-          </div>
         </div>
       </div>
     </section>
