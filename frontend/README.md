@@ -9,7 +9,7 @@ A modern, responsive portfolio website built with React.js showcasing my skills 
 - **Interactive Components** - Scroll animations and hover effects
 - **Project Showcase** - Detailed project cards with tech stacks
 - **Contact Form** - Functional contact form for inquiries
-- **Social Integration** - Links to GitHub, LinkedIn, LeetCode, and WhatsApp
+- **Social Integration** - Links to GitHub, LinkedIn, LeetCode, and Email
 
 ## 🛠️ Technologies Used
 
