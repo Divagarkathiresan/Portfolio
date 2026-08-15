@@ -35,13 +35,13 @@ const Skills = () => {
     { 
       name: 'MySQL', 
       icon: <SiMysql />, 
-      experience: '2+ years', 
+      experience: '3+ years', 
       description: 'Database design, query optimization, transactions, indexing'
     },
     { 
       name: 'Git', 
       icon: <FaGitAlt />, 
-      experience: '2+ years', 
+      experience: '3+ years', 
       description: 'Version control, branching strategies, collaborative development'
     },
   ];
