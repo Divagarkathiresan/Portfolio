@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/divagar-portfolio/static/css/main.a50dd95a.css",
+    "main.js": "/divagar-portfolio/static/js/main.7bf46d69.js",
+    "static/media/Photo.jpg": "/divagar-portfolio/static/media/Photo.9bbfe8b7c37b67392d70.jpg",
+    "index.html": "/divagar-portfolio/index.html",
+    "main.a50dd95a.css.map": "/divagar-portfolio/static/css/main.a50dd95a.css.map",
+    "main.7bf46d69.js.map": "/divagar-portfolio/static/js/main.7bf46d69.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a50dd95a.css",
+    "static/js/main.7bf46d69.js"
+  ]
+}
