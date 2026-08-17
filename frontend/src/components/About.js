@@ -38,11 +38,11 @@ const About = () => {
           <div className="about-sidebar animate-on-scroll from-right">
             <div className="about-stats">
               <div className="stat">
-                <h3>3+</h3>
+                <h3>4+</h3>
                 <p>Projects Completed</p>
               </div>
               <div className="stat">
-                <h3>2+</h3>
+                <h3>3+</h3>
                 <p>Years Learning</p>
               </div>
               <div className="stat">
