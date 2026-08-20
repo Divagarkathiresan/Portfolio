@@ -136,17 +136,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-            <div className="social-links">
-              <a href="https://github.com/Divagarkathiresan" target="_blank" rel="noopener noreferrer">
-                <FaGithub />
-              </a>
-              <a href="https://www.linkedin.com/in/divagar-kathiresan-a789352a0" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin />
-              </a>
-              <a href="https://leetcode.com/u/Divagar_k/" target="_blank" rel="noopener noreferrer">
-                <SiLeetcode />
-              </a>
-            </div>
           </div>
           <form className="contact-form animate-on-scroll from-right" onSubmit={handleSubmit}>
             <div className="form-group">

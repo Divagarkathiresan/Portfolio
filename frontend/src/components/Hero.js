@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaFilePdf } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 import { useScrollAnimation } from '../utils/scrollAnimation';
 import whatsappImage from './Photo.jpg';
+import resumePDF from './Divagar Kathiresan Resume June 2026.pdf';
 import './Hero.css';
 
 const Hero = () => {
@@ -44,17 +45,25 @@ const Hero = () => {
               <a href="#contact" className="btn btn-outline">Connect</a>
             </div>
             <div className="social-links hero-element">
-              <a href="https://github.com/Divagarkathiresan" target="_blank" rel="noopener noreferrer">
-                <FaGithub />
+              <a href="https://github.com/Divagarkathiresan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <span className="social-icon" aria-hidden="true"><FaGithub /></span>
+                <span className="social-label">GitHub</span>
               </a>
-              <a href="https://www.linkedin.com/in/divagar-kathiresan-a789352a0" target="_blank" rel="noopener noreferrer">
-                <FaLinkedin />
+              <a href="https://www.linkedin.com/in/divagar-kathiresan-a789352a0" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <span className="social-icon" aria-hidden="true"><FaLinkedin /></span>
+                <span className="social-label">LinkedIn</span>
               </a>
-              <a href="https://leetcode.com/u/Divagar_k/" target="_blank" rel="noopener noreferrer">
-                <SiLeetcode />
+              <a href="https://leetcode.com/u/Divagar_k/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+                <span className="social-icon" aria-hidden="true"><SiLeetcode /></span>
+                <span className="social-label">LeetCode</span>
               </a>
-              <a href="mailto:divagar656@gmail.com">
-                <FaEnvelope />
+              <a href="mailto:divagar656@gmail.com" aria-label="Email">
+                <span className="social-icon" aria-hidden="true"><FaEnvelope /></span>
+                <span className="social-label">Email</span>
+              </a>
+              <a href={resumePDF} target="_blank" rel="noopener noreferrer" aria-label="Resume">
+                <span className="social-icon" aria-hidden="true"><FaFilePdf /></span>
+                <span className="social-label">Resume</span>
               </a>
             </div>
           </div>
